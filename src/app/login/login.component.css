@@ -1,0 +1,49 @@
+
+.login-wrapper{ position: fixed; top:0; right:0; bottom: 0;left: 0; background:#e9e9e9}
+.login-container{     border: 1px solid #ccc;
+    background: #fff;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;}
+.login-container .mat-form-field{ width: 100%}
+.login-imgwrapper{ width: 100%; text-align:center }
+ .loader-section.section-right {
+    right: 0;
+}
+.loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #15405d;
+    z-index: 1000;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+ .loader-section.section-left {
+    left: 0;
+}
+
+.loaded  .loader-section.section-left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded  .loader-section.section-right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+

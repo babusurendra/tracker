@@ -1,0 +1,83 @@
+<!-- <mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="Clearable input" [(ngModel)]="value" />
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field> -->
+<!-- <input type="button" value="Add" mat-fab color="primary">Primary</button> (click)="addEmp()" /> -->
+<div style="overflow:scroll">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>Test Case Id</td>
+                <td>Test Case Name</td>
+                <td>test_case_status</td>
+                <td>Bug Exist</td>
+                <td>Other Comments</td>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let todo of user_todos;let i=idx">
+                <h5>{{todo.test_case_id}}</h5>
+                <!-- <ng-template [ngTemplateOutlet]="loadTemplate(todo)" [ngTemplateOutletContext ]="{ $implicit: todo, idx: i }"></ng-template> -->
+            </tr> 
+
+            </tbody>
+    </table>
+    <!-- <br>
+    <input type="button" value="Load More.." class="btn btn-primary btn-lg btn-block" (click)="showmore()" [disabled]="disbaleshowmore"
+    /> --> 
+
+            <!--The Html Template for Read-Only Rows-->
+            <ng-template #readOnlyTemplate let-emp>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <input type="button" value="Edit" class="btn btn-default" (click)="editEmployee(emp)" />
+        </td>
+        <td>
+            <input type="button" value="Delete" (click)="deleteEmp(emp)" class="btn btn-danger" />
+        </td>
+    </ng-template>
+            <!--Ends Here-->
+
+            <!--The Html Template for Editable Rows-->
+            <!-- <ng-template #editTemplate>
+
+        <td>
+            <input type="text" [(ngModel)]="selemp._id" readonly disabled/>
+        </td>
+
+        <td>
+            <input type="text" [(ngModel)]="selemp.EmpNo" required #EmpNo="ngModel" name="EmpNo" />
+            <div *ngIf="EmpNo.invalid && (EmpNo.dirty || EmpNo.touched)" class="alert alert-danger">Enter Valid Empno</div>
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="selemp.EmpName" required #EmpName="ngModel" name="EmpName" />
+            <div *ngIf="EmpName.invalid && (EmpName.touched ||EmpName.dirty)" class="alert alert-danger">Employee Name should not be blank</div>
+        </td>
+        <td>
+            <input type="number" [(ngModel)]="selemp.Salary" required #Salary="ngModel" min="1000" max="10000" />
+            <div *ngIf="Salary.invalid&&(Salary.touched ||Salary.dirty)" class="alert alert-danger">Enter Valid amount and minimum should be 1000</div>
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="selemp.DeptName" required #DeptName="ngModel" />
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="selemp.Designation" required #Designation="ngModel" />
+        </td>
+        <td>
+            <input type="button" value="Save" (click)="saveEmp()" class="btn btn-success" />
+        </td>
+        <td>
+            <input type="button" value="Cancel" (click)="cancel()" class="btn btn-warning" />
+        </td>
+    </ng-template> -->
+            <!-- Ends Here -->
